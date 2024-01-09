@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction</title>
+</head>
+<body>
+    <h1>Diabetes Prediction Form</h1>
+
+    <form action="/predict_diabetes" method="post">
+
+        <label for="pregnancies">Pregnancies:</label>
+        <input type="number" id="pregnancies" name="pregnancies"><br><br>
+
+        <label for="glucose">Glucose:</label>
+        <input type="number" step="any" id="glucose" name="glucose"><br><br>
+
+        <label for="bloodpressure">Blood Pressure:</label>
+        <input type="number" step="any" id="bloodpressure" name="bloodpressure"><br><br>
+
+        <label for="skinthickness">Skin Thickness:</label>
+        <input type="number" step="any" id="skinthickness" name="skinthickness"><br><br>
+
+        <label for="insulin">Insulin:</label>
+        <input type="number" step="any" id="insulin" name="insulin"><br><br>
+
+        <label for="bmi">BMI:</label>
+        <input type="number" step="any" id="bmi" name="bmi"><br><br>
+
+        <label for="dpf">Diabetes Pedigree Function:</label>
+        <input type="number" step="any" id="dpf" name="dpf"><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction Result: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
+

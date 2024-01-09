@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liver Disease Prediction</title>
+</head>
+<body>
+    <h1>Liver Disease Prediction Form</h1>
+
+    <form action="/predict_liver" method="post">
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" required><br><br>
+
+        <label for="Gender">Gender (0 for Female, 1 for Male):</label>
+        <input type="number" id="Gender" name="Gender" required><br><br>
+
+        <label for="Total_Bilirubin">Total Bilirubin:</label>
+        <input type="number" step="any" id="Total_Bilirubin" name="Total_Bilirubin" required><br><br>
+
+        <label for="Direct_Bilirubin">Direct Bilirubin:</label>
+        <input type="number" step="any" id="Direct_Bilirubin" name="Direct_Bilirubin" required><br><br>
+
+        <label for="Alkaline_Phosphotase">Alkaline Phosphotase:</label>
+        <input type="number" step="any" id="Alkaline_Phosphotase" name="Alkaline_Phosphotase" required><br><br>
+
+        <label for="Alamine_Aminotransferase">Alamine Aminotransferase:</label>
+        <input type="number" step="any" id="Alamine_Aminotransferase" name="Alamine_Aminotransferase" required><br><br>
+
+        <label for="Aspartate_Aminotransferase">Aspartate Aminotransferase:</label>
+        <input type="number" step="any" id="Aspartate_Aminotransferase" name="Aspartate_Aminotransferase" required><br><br>
+
+        <label for="Total_Protiens">Total Proteins:</label>
+        <input type="number" step="any" id="Total_Protiens" name="Total_Protiens" required><br><br>
+
+        <label for="Albumin">Albumin:</label>
+        <input type="number" step="any" id="Albumin" name="Albumin" required><br><br>
+
+        <label for="Albumin_and_Globulin_Ratio">Albumin and Globulin Ratio:</label>
+        <input type="number" step="any" id="Albumin_and_Globulin_Ratio" name="Albumin_and_Globulin_Ratio" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction Result: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kidney Disease Prediction</title>
+</head>
+<body>
+    <h1>Kidney Disease Prediction Form</h1>
+
+    <form action="/predict_kidney" method="post">
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age"><br><br>
+
+        <label for="bp">Blood Pressure:</label>
+        <input type="number" id="bp" name="bp"><br><br>
+
+        <label for="al">Albumin:</label>
+        <input type="number" step="any" id="al" name="al"><br><br>
+
+        <label for="su">Sugar:</label>
+        <input type="number" step="any" id="su" name="su"><br><br>
+
+        <label for="rbc">Red Blood Cells:</label>
+        <input type="number" id="rbc" name="rbc"><br><br>
+
+        <label for="pc">Pus Cell:</label>
+        <input type="number" id="pc" name="pc"><br><br>
+
+        <label for="pcc">Pus Cell Clumps:</label>
+        <input type="number" id="pcc" name="pcc"><br><br>
+
+        <label for="ba">Bacteria:</label>
+        <input type="number" id="ba" name="ba"><br><br>
+
+        <label for="bgr">Blood Glucose Random:</label>
+        <input type="number" id="bgr" name="bgr"><br><br>
+
+        <label for="bu">Blood Urea:</label>
+        <input type="number" id="bu" name="bu"><br><br>
+
+        <label for="sc">Serum Creatinine:</label>
+        <input type="number" id="sc" name="sc"><br><br>
+
+        <label for="pot">Potassium:</label>
+        <input type="number" id="pot" name="pot"><br><br>
+
+        <label for="wc">White Blood Cell Count:</label>
+        <input type="number" id="wc" name="wc"><br><br>
+
+        <label for="htn">Hypertension:</label>
+        <input type="number" id="htn" name="htn"><br><br>
+
+        <label for="dm">Diabetes Mellitus:</label>
+        <input type="number" id="dm" name="dm"><br><br>
+
+        <label for="cad">Coronary Artery Disease:</label>
+        <input type="number" id="cad" name="cad"><br><br>
+
+        <label for="pe">Pedal Edema:</label>
+        <input type="number" id="pe" name="pe"><br><br>
+
+        <label for="ane">Anemia:</label>
+        <input type="number" id="ane" name="ane"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+        <h2>Prediction Result: {{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <title>Pneumonia Prediction Result</title>
+</head>
+<body>
+    <h1>Pneumonia Image Prediction Result</h1>
+
+    {% if pred is not None %}
+        {% if pred == 1 %}
+            <div class="alert alert-danger">
+                <center>The image indicates Pneumonia.</center>
+            </div>
+        {% else %}
+            <div class="alert alert-success">
+                <center>No Pneumonia detected.</center>
+            </div>
+        {% endif %}
+    {% else %}
+        <p>No prediction made. Please try again.</p>
+    {% endif %}
+
+    <a href="/pneumoniapredict">Back to Prediction</a>
+</body>
+</html>
